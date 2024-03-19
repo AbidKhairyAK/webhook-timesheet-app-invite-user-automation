@@ -1,6 +1,12 @@
 module.exports = {
-  apps : [{
-    name   : "app1",
-    script : "./app.js"
+  apps: [{
+    name: "webhook-timesheet",
+    script: "./index.js",
+    env_development: {
+      NODE_ENV: "development"
+    },
+    env_production: {
+      NODE_ENV: "production"
+    }
   }]
 }

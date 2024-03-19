@@ -27,7 +27,7 @@ async function inviteEmail (email) {
 		await page.click('button.t--invite-user-btn')
 		await page.waitForSelector('text/The user has been invited successfully')
 
-		await page.screenshot({ path: 'example.png' })
+		// await page.screenshot({ path: 'example.png' })
 	}
 	catch (err) {
 		console.log(err)
