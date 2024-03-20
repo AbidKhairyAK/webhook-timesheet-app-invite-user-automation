@@ -7,9 +7,12 @@ async function inviteEmail (email) {
 	const page = await browser.newPage()
 
 	try {
+		let targetSite = process.env.NODE_ENV === 'production'
+			? 'http://localhost:5831'
+			: 'http://nat3.reconv.pl:5831'
+
 		await page.goto('http://nat3.reconv.pl:5831')
 		log('p: visited target web')
-		log('p: ')
 
 		await page.waitForSelector('text/Sign in')
 		await page.type('input[name=username]', 'puppeteer@automation.com')
