@@ -11,7 +11,7 @@ async function inviteEmail (email) {
 			? 'http://localhost:5831'
 			: 'http://nat3.reconv.pl:5831'
 
-		await page.goto('http://nat3.reconv.pl:5831')
+		await page.goto(targetSite)
 		log('p: visited target web')
 
 		await page.waitForSelector('text/Sign in')
